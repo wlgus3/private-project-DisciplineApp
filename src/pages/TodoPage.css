@@ -1,0 +1,11 @@
+.addTodoButton {
+  font-size: 5rem;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  color: rgb(101, 200, 30);
+  z-index: 100;
+  cursor: pointer;
+
+  /* width: 100px; */
+}

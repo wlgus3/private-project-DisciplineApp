@@ -1,0 +1,44 @@
+.Todo {
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px 1px rgb(70, 120, 212);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.checkbox {
+  padding-right: 5px;
+}
+
+/* .Todo + .Todo {
+  margin-top: 150px;
+} */
+
+.content {
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.content svg {
+  /* svg는 파일종류 -> 아이콘 파일  */
+  font-size: 1.5rem;
+  color: rgb(70, 120, 212);
+}
+
+.content.checked .text {
+  color: rgb(69, 69, 116);
+  text-decoration: line-through;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.content .text {
+  margin-left: 0.5rem;
+  flex: 1;
+}

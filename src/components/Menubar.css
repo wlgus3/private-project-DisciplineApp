@@ -1,0 +1,14 @@
+.Menubar {
+  background-color: rgb(197, 221, 153);
+  text-align: center;
+  display: flex;
+  font-size: 3ch;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  /* margin: 20px; */
+  padding: 20px;
+}
+
+.tab {
+}

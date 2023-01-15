@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import Menubar from "./components/Menubar";
+import { BrowserRouter, Routes, Route, Link, Switch, Router } from "react-router-dom";
 
-function App() {
+import TodoPage from "./pages/TodoPage";
+import WorksoutPage from "./pages/WorksoutPage";
+import ReadingPage from "./pages/ReadingPage";
+import MeditationPage from "./pages/MeditationPage";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Menubar />
+        <Routes>
+          {/* <Switch> */}
+          <Route path="/" element={<TodoPage />} exact></Route>
+          <Route path="/worksout" element={<WorksoutPage />}></Route>
+          <Route path="/reading" element={<ReadingPage />}></Route>
+          <Route path="/meditation" element={<MeditationPage />}></Route>
+          {/* </Switch> */}
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
