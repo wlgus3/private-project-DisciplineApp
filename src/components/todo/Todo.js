@@ -1,8 +1,9 @@
 import React from "react";
 import "./Todo.css";
 import { IoIosArrowDropdownCircle, IoIosArrowDropdown } from "react-icons/io";
+import TodoInsert from "./TodoInsert";
 // 개별 todo 항목
-const Todo = ({ todo, onCheckToggle }) => {
+const Todo = ({ onchangeSelectedTodo, openIsertToggle, todo, onCheckToggle }) => {
   const { id, text, checked } = todo;
   return (
     <div className="Todo">
@@ -17,6 +18,14 @@ const Todo = ({ todo, onCheckToggle }) => {
       >
         {checked ? <IoIosArrowDropdownCircle /> : <IoIosArrowDropdown />}
         <div className="text">{text}</div>
+        <button
+          onClick={() => {
+            openIsertToggle();
+            onchangeSelectedTodo(todo);
+          }}
+        >
+          변경
+        </button>
       </div>
     </div>
   );
